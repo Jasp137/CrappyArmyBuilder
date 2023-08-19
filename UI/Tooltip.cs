@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 
 
-[ExecuteInEditMode()]
+//[ExecuteInEditMode()]
 public class Tooltip : MonoBehaviour {
     
     public Text headerField;
