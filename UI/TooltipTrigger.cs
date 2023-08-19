@@ -6,8 +6,11 @@ using UnityEngine.EventSystems;
 public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
 
     private static LTDescr delay;
-    
-    public string header;
+    private static LTDescr delay2;
+
+    public static bool freezeTooltip;
+
+    public string header; //Title
 
     [Multiline()]
     public string content; // Game info
@@ -15,11 +18,18 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     [Multiline()]
     public string information; // Real Life additional Info
 
+
+    private void Awake() {
+        freezeTooltip = false;
+    }
+
     public void OnPointerEnter(PointerEventData eventData) {
-        
         //Delay with LeanTween Plugin
-        delay = LeanTween.delayedCall(0.7f, () => {
+        delay = LeanTween.delayedCall(0.5f, () => {
             TooltipSystem.Show(information, content, header);
+        });
+        delay2 = LeanTween.delayedCall(1f, () => {
+            freezeTooltip = true;
         });
     }
 
@@ -27,5 +37,6 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public void OnPointerExit(PointerEventData eventData) {
         LeanTween.cancel(delay.uniqueId);
         TooltipSystem.Hide();
+        freezeTooltip = false;
     }
 }

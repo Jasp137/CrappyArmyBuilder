@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 
 
-//[ExecuteInEditMode()]
+[ExecuteInEditMode()]
 public class Tooltip : MonoBehaviour {
     
     public Text headerField;
@@ -74,7 +74,7 @@ public class Tooltip : MonoBehaviour {
     
 private void FollowCursor() {
     if (!popupCanvasObject.activeSelf) { return; }
-
+if (TooltipTrigger.freezeTooltip == false) {
     Vector3 newPos = Input.mousePosition + offset;
     newPos.z = 0f;
     //Lösung = Screen Breite - (x-Position + Breite des Rect Transform * Scale des Canvas / 2) - padding
@@ -99,6 +99,7 @@ private void FollowCursor() {
     }
       
     rectTransform.transform.position = newPos;
+}
     }
 
     //popupCanvasObject
