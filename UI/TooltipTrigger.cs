@@ -31,10 +31,6 @@ private void Start() {
     }
 
     public void OnPointerEnter(PointerEventData eventData) {
-        if (objectRaycast == false) {
-            TooltipCanvas.GetComponent<TooltipManager>().InstantiateTooltip();
-        }
-
         objectRaycast = true;
         //Delay with LeanTween Plugin
         delay = LeanTween.delayedCall(0.5f, () => {

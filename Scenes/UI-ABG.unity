@@ -774,6 +774,19 @@ MonoBehaviour:
   offset: {x: 0, y: -25, z: 0}
   padding: 0
   popupCanvas: {fileID: 1379857834}
+--- !u!114 &146879080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146879064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875f43f48c3a75844a83682f2e1c6f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: {fileID: 146879074}
 --- !u!1 &178157367
 GameObject:
   m_ObjectHideFlags: 0
@@ -10763,7 +10776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8457047926139994105, guid: a3878ed13f7408f4fa56448ef93885a8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -37.52173
+      value: -70.35321
       objectReference: {fileID: 0}
     - target: {fileID: 8457047926139994105, guid: a3878ed13f7408f4fa56448ef93885a8, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -10929,4 +10942,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8457047926139994104, guid: a3878ed13f7408f4fa56448ef93885a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 146879074}
+    - targetCorrespondingSourceObject: {fileID: 8457047926139994104, guid: a3878ed13f7408f4fa56448ef93885a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 146879080}
   m_SourcePrefab: {fileID: 100100000, guid: a3878ed13f7408f4fa56448ef93885a8, type: 3}
