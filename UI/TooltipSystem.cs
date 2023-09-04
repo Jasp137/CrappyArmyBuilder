@@ -16,6 +16,15 @@ public class TooltipSystem : MonoBehaviour {
         current = this;
     }
 
+    public void InstantiateTooltip(){
+        Instantiate(tooltip);
+        Debug.Log("Initiated Tooltip");
+    }
+
+    public void DestroyTooltip(){
+        Destroy(tooltip);
+    }
+
     public static void Show(string information,string content, string header = "") {
         current.tooltip.SetText(information, content, header);
         current.tooltip.gameObject.SetActive(true);

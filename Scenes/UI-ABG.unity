@@ -6177,19 +6177,6 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 8457047927509216609, guid: a3878ed13f7408f4fa56448ef93885a8, type: 3}
   m_PrefabInstance: {fileID: 8457047926442538750}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1379857836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1379857832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e787c227848cefc4a9548c4feabcb49d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tooltip: {fileID: 146879064}
 --- !u!1 &1382002620
 GameObject:
   m_ObjectHideFlags: 0
@@ -10766,10 +10753,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8457047926139994096, guid: a3878ed13f7408f4fa56448ef93885a8, type: 3}
-      propertyPath: tooltip
-      value: 
-      objectReference: {fileID: 146879074}
     - target: {fileID: 8457047926139994105, guid: a3878ed13f7408f4fa56448ef93885a8, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -10780,7 +10763,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8457047926139994105, guid: a3878ed13f7408f4fa56448ef93885a8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -57.845947
+      value: -37.52173
       objectReference: {fileID: 0}
     - target: {fileID: 8457047926139994105, guid: a3878ed13f7408f4fa56448ef93885a8, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -10943,9 +10926,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8457047927509216610, guid: a3878ed13f7408f4fa56448ef93885a8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1379857836}
     - targetCorrespondingSourceObject: {fileID: 8457047926139994104, guid: a3878ed13f7408f4fa56448ef93885a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 146879074}
