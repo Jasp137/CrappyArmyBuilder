@@ -8,6 +8,9 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     private static LTDescr delay;
     private static LTDescr delay2;
 
+    private GameObject TooltipCanvas;
+
+    private bool objectRaycast;
     public static bool freezeTooltip;
 
     public string header; //Title
@@ -18,12 +21,21 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     [Multiline()]
     public string information; // Real Life additional Info
 
+private void Start() {
+    TooltipCanvas = GameObject.Find("Tooltip-Canvas");
+    Debug.Log(TooltipCanvas+", Tooltip Canvas");
+}
 
     private void Awake() {
         freezeTooltip = false;
     }
 
     public void OnPointerEnter(PointerEventData eventData) {
+        if (objectRaycast == false) {
+            TooltipCanvas.GetComponent<TooltipManager>().InstantiateTooltip();
+        }
+
+        objectRaycast = true;
         //Delay with LeanTween Plugin
         delay = LeanTween.delayedCall(0.5f, () => {
             TooltipSystem.Show(information, content, header);
@@ -35,8 +47,15 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     //Stop Tooltip when Mouse leaves Trigger
     public void OnPointerExit(PointerEventData eventData) {
-        LeanTween.cancel(delay.uniqueId);
-        TooltipSystem.Hide();
-        freezeTooltip = false;
+        objectRaycast = false;
+        CheckRaycast();
+    }
+
+    public void CheckRaycast() {
+        if(objectRaycast == false && TooltipSystem.tooltipRaycast == false) {
+    //	    LeanTween.cancel(delay.uniqueId);
+            TooltipSystem.Hide();
+            freezeTooltip = false;
+        }
     }
 }

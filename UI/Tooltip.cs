@@ -74,33 +74,35 @@ public class Tooltip : MonoBehaviour {
     
 private void FollowCursor() {
     if (!popupCanvasObject.activeSelf) { return; }
-if (TooltipTrigger.freezeTooltip == false) {
-    Vector3 newPos = Input.mousePosition + offset;
-    newPos.z = 0f;
-    //Lösung = Screen Breite - (x-Position + Breite des Rect Transform * Scale des Canvas / 2) - padding
-    float rightEdgeToScreenEdgeDistance = Screen.width - (newPos.x + rectTransform.rect.width * popupCanvas.scaleFactor / 2) - padding;
-    if (rightEdgeToScreenEdgeDistance < 0) {
+
+    //Freeze Tooltip to enable hovering over it
+    if (TooltipTrigger.freezeTooltip == false) {
+        Vector3 newPos = Input.mousePosition + offset;
+        newPos.z = 0f;
+        //Lösung = Screen Breite - (x-Position + Breite des Rect Transform * Scale des Canvas / 2) - padding
+        float rightEdgeToScreenEdgeDistance = Screen.width - (newPos.x + rectTransform.rect.width * popupCanvas.scaleFactor / 2) - padding;
+        if (rightEdgeToScreenEdgeDistance < 0) {
             newPos.x += rightEdgeToScreenEdgeDistance;
-    }
+        }
 
-    float leftEdgeToScreenEdgeDistance = 0 - (newPos.x - rectTransform.rect.width * popupCanvas.scaleFactor / 2) - padding;
-    if (leftEdgeToScreenEdgeDistance > 0) {
+        float leftEdgeToScreenEdgeDistance = 0 - (newPos.x - rectTransform.rect.width * popupCanvas.scaleFactor / 2) - padding;
+        if (leftEdgeToScreenEdgeDistance > 0) {
             newPos.x += leftEdgeToScreenEdgeDistance;
-    }
+        }
 
-    float topEdgeToScreenEdgeDistance = Screen.height - (newPos.y + rectTransform.rect.height * popupCanvas.scaleFactor) - padding;
-    if (topEdgeToScreenEdgeDistance < 0) {
+        float topEdgeToScreenEdgeDistance = Screen.height - (newPos.y + rectTransform.rect.height * popupCanvas.scaleFactor) - padding;
+        if (topEdgeToScreenEdgeDistance < 0) {
             newPos.y += topEdgeToScreenEdgeDistance;
-    }
+        }
 
-    float bootomEdgeToScreenEdgeDistance = 0 - (newPos.y - rectTransform.rect.height * popupCanvas.scaleFactor) - padding;
-    if (bootomEdgeToScreenEdgeDistance > 0) {
+        float bootomEdgeToScreenEdgeDistance = 0 - (newPos.y - rectTransform.rect.height * popupCanvas.scaleFactor) - padding;
+        if (bootomEdgeToScreenEdgeDistance > 0) {
             newPos.y += bootomEdgeToScreenEdgeDistance;
-    }
+        }
       
-    rectTransform.transform.position = newPos;
-}
+        rectTransform.transform.position = newPos;
     }
+}
 
     //popupCanvasObject
     //Vector3
