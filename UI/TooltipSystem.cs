@@ -10,6 +10,9 @@ public class TooltipSystem : MonoBehaviour {
 
     public static bool tooltipRaycast;
 
+    //TooltipPrefab
+    public GameObject prefabTooltip;
+
     public Tooltip tooltip;
 
     public void Awake() {
@@ -26,7 +29,7 @@ public class TooltipSystem : MonoBehaviour {
     }
 */
     public static void Show(string information,string content, string header = "") {
-        Instantiate(current.tooltip);
+        GameObject childGameObject = Instantiate(prefabTooltip, Tooltip-Canvas, true);
         current.tooltip.SetText(information, content, header);
     }
 
