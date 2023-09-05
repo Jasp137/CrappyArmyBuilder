@@ -72,7 +72,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Equipment refers to the resources and tools used by military forces in
+    their operations, including weapons, vehicles, communication systems, and protective
+    gear. The type of equipment used will depend on the mission and the environment.
 --- !u!222 &7203955849397651363
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -173,7 +175,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Equip your Force
 --- !u!222 &7203955849450303087
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -274,7 +276,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Build the Weapeons and Vehicles your Units will use.
 --- !u!222 &7203955849580360587
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -317,7 +319,6 @@ GameObject:
   - component: {fileID: 7203955850350051434}
   - component: {fileID: 7203955850350051436}
   - component: {fileID: 7203955850350051435}
-  - component: {fileID: 8087087956392119841}
   m_Layer: 5
   m_Name: Tooltip
   m_TagString: Untagged
@@ -446,25 +447,3 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
---- !u!114 &8087087956392119841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7203955850350051430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4edca937ef9d96c4696b4777ab0ad687, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  headerField: {fileID: 7203955849450303088}
-  contentField: {fileID: 7203955849580360588}
-  informationField: {fileID: 7203955849397651364}
-  layoutElement: {fileID: 7203955850350051435}
-  characterWrapLimit: 80
-  rectTransform: {fileID: 7203955850350051431}
-  popupCanvasObject: {fileID: 0}
-  offset: {x: 0, y: -25, z: 0}
-  padding: 0
-  popupCanvas: {fileID: 0}

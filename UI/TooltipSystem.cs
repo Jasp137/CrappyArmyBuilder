@@ -15,7 +15,7 @@ public class TooltipSystem : MonoBehaviour {
     public void Awake() {
         current = this;
     }
-
+/*
     public void InstantiateTooltip(){
         Instantiate(tooltip);
         Debug.Log("Initiated Tooltip");
@@ -24,14 +24,14 @@ public class TooltipSystem : MonoBehaviour {
     public void DestroyTooltip(){
         Destroy(tooltip);
     }
-
+*/
     public static void Show(string information,string content, string header = "") {
+        Instantiate(current.tooltip);
         current.tooltip.SetText(information, content, header);
-        current.tooltip.gameObject.SetActive(true);
     }
 
     public static void Hide() {
-        current.tooltip.gameObject.SetActive(false);
+        DestroyImmediate(current.tooltip, true);
     }
 
     public void OnPointerEnter(PointerEventData eventData) {
