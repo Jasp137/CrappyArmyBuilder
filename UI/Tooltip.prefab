@@ -319,6 +319,7 @@ GameObject:
   - component: {fileID: 7203955850350051434}
   - component: {fileID: 7203955850350051436}
   - component: {fileID: 7203955850350051435}
+  - component: {fileID: -2524057260056239574}
   m_Layer: 5
   m_Name: Tooltip
   m_TagString: Untagged
@@ -342,11 +343,11 @@ RectTransform:
   - {fileID: 7203955849580360585}
   - {fileID: 7203955849397651361}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -46.9021, y: -72}
+  m_AnchoredPosition: {x: -53.15576, y: -120}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &7203955850350051433
@@ -434,7 +435,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7203955850350051430}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
   m_Name: 
@@ -447,3 +448,25 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &-2524057260056239574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7203955850350051430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4edca937ef9d96c4696b4777ab0ad687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headerField: {fileID: 7203955849450303088}
+  contentField: {fileID: 7203955849580360588}
+  informationField: {fileID: 7203955849397651364}
+  layoutElement: {fileID: 7203955850350051435}
+  characterWrapLimit: 40
+  rectTransform: {fileID: 7203955850350051431}
+  popupCanvasObject: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
+  padding: 0
+  popupCanvas: {fileID: 0}

@@ -21,13 +21,11 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     [Multiline()]
     public string information; // Real Life additional Info
 
-private void Start() {
-    TooltipCanvas = GameObject.Find("Tooltip-Canvas");
-    Debug.Log(TooltipCanvas+", Tooltip Canvas");
-}
 
     private void Awake() {
         freezeTooltip = false;
+        TooltipCanvas = GameObject.Find("Tooltip-Canvas");
+        Debug.Log(TooltipCanvas+", Tooltip Canvas");
     }
 
     public void OnPointerEnter(PointerEventData eventData) {

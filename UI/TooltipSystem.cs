@@ -11,7 +11,9 @@ public class TooltipSystem : MonoBehaviour {
     public static bool tooltipRaycast;
 
     //TooltipPrefab
-    public GameObject prefabTooltip;
+    public static GameObject prefabTooltip;
+
+    public static GameObject TooltipCanvas;
 
     public Tooltip tooltip;
 
@@ -29,7 +31,8 @@ public class TooltipSystem : MonoBehaviour {
     }
 */
     public static void Show(string information,string content, string header = "") {
-        GameObject childGameObject = Instantiate(prefabTooltip, Tooltip-Canvas, true);
+        GameObject TooltipInstantiated = Instantiate(prefabTooltip,new Vector3(0, 0, 0), Quaternion.identity, TooltipCanvas.transform);
+        tooltip = TooltipInstantiated;
         current.tooltip.SetText(information, content, header);
     }
 

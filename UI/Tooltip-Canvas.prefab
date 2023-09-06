@@ -33,7 +33,7 @@ RectTransform:
   m_Children:
   - {fileID: 8457047926139994105}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875f43f48c3a75844a83682f2e1c6f47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tooltip: {fileID: 7394897683370406335}
+  tooltip: {fileID: -2524057260056239574, guid: 905693604edb42d43ba4cae07ecfc054, type: 3}
 --- !u!1001 &1631692733782523806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -107,12 +107,28 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8457047927509216606}
     m_Modifications:
+    - target: {fileID: -2524057260056239574, guid: 905693604edb42d43ba4cae07ecfc054, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2524057260056239574, guid: 905693604edb42d43ba4cae07ecfc054, type: 3}
+      propertyPath: popupCanvas
+      value: 
+      objectReference: {fileID: 8457047927509216609}
+    - target: {fileID: -2524057260056239574, guid: 905693604edb42d43ba4cae07ecfc054, type: 3}
+      propertyPath: popupCanvasObject
+      value: 
+      objectReference: {fileID: 8457047927509216610}
     - target: {fileID: 7203955849397651361, guid: 905693604edb42d43ba4cae07ecfc054, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7203955849397651361, guid: 905693604edb42d43ba4cae07ecfc054, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7203955849397651361, guid: 905693604edb42d43ba4cae07ecfc054, type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7203955849397651361, guid: 905693604edb42d43ba4cae07ecfc054, type: 3}
@@ -136,6 +152,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7203955849450303085, guid: 905693604edb42d43ba4cae07ecfc054, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7203955849450303085, guid: 905693604edb42d43ba4cae07ecfc054, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
@@ -153,6 +173,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7203955849580360585, guid: 905693604edb42d43ba4cae07ecfc054, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7203955849580360585, guid: 905693604edb42d43ba4cae07ecfc054, type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7203955849580360585, guid: 905693604edb42d43ba4cae07ecfc054, type: 3}
@@ -237,11 +261,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7203955850350051431, guid: 905693604edb42d43ba4cae07ecfc054, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -46.9021
+      value: -60.97278
       objectReference: {fileID: 0}
     - target: {fileID: 7203955850350051431, guid: 905693604edb42d43ba4cae07ecfc054, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -72
+      value: -120
       objectReference: {fileID: 0}
     - target: {fileID: 7203955850350051431, guid: 905693604edb42d43ba4cae07ecfc054, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -268,17 +292,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 905693604edb42d43ba4cae07ecfc054, type: 3}
---- !u!114 &7394897683370406335 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8087087956392119841, guid: 905693604edb42d43ba4cae07ecfc054, type: 3}
-  m_PrefabInstance: {fileID: 1631692733782523806}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4edca937ef9d96c4696b4777ab0ad687, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &8457047926139994105 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7203955850350051431, guid: 905693604edb42d43ba4cae07ecfc054, type: 3}
