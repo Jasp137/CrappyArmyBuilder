@@ -11,9 +11,9 @@ public class TooltipSystem : MonoBehaviour {
     public static bool tooltipRaycast;
 
     //TooltipPrefab
-    public GameObject prefabTooltip;
+    public static GameObject prefabTooltip;
 
-    public GameObject TooltipCanvas;
+    public static GameObject TooltipCanvas;
 
     public Tooltip tooltip;
 
