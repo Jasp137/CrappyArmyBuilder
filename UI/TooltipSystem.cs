@@ -32,8 +32,7 @@ public class TooltipSystem : MonoBehaviour {
 */
     public static void Show(string information,string content, string header = "") {
         GameObject TooltipInstantiated = Instantiate(prefabTooltip,new Vector3(0, 0, 0), Quaternion.identity, TooltipCanvas.transform);
-        tooltip = TooltipInstantiated;
-        current.tooltip.SetText(information, content, header);
+        TooltipInstantiated.GetComponent<TooltipSystem>().tooltip.SetText(information, content, header);
     }
 
     public static void Hide() {
