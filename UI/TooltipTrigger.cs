@@ -8,6 +8,11 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     private static LTDescr delay;
     private static LTDescr delay2;
 
+<<<<<<< HEAD
+=======
+    private GameObject TooltipCanvas;
+
+>>>>>>> 495c2f7dbddfcaac2df47d2561cb144ccb0edb3d
     private bool objectRaycast;
     public static bool freezeTooltip;
 
@@ -28,6 +33,8 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     private void Awake() {
         freezeTooltip = false;
+        TooltipCanvas = GameObject.Find("Tooltip-Canvas");
+        Debug.Log(TooltipCanvas+", Tooltip Canvas");
     }
 
     public void OnPointerEnter(PointerEventData eventData) {
