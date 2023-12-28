@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+
 
 public class TooltipSystem : MonoBehaviour {
     
     private static TooltipSystem current;
+
+    public static bool tooltipRaycast;
 
     public Tooltip tooltip;
 
@@ -19,5 +23,12 @@ public class TooltipSystem : MonoBehaviour {
 
     public static void Hide() {
         current.tooltip.gameObject.SetActive(false);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData) {
+        tooltipRaycast = true;
+    }
+    public void OnPointerExit(PointerEventData eventData) {
+        tooltipRaycast = false;
     }
 }
